@@ -43,10 +43,7 @@ producer.on('error',function(err){
 })    
 
 app.get('/', function(req,res){
-    User.find({}, function(err, user) {
-        res.status(200).send(user);
-        console.log(user)
-      });
+    res.json({greeting:'------'})
     });
 
 app.post('/sendMsg',function(req,res){
